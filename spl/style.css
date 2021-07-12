@@ -1,0 +1,66 @@
+:root {
+    /* ---- Color Palette ---- */
+    --color-hi-tone: #626d9e;
+    --color-mid-tone: #c6caec;
+    --color-neutral: #f4f0f6;
+    --color-hi-tint: #fadcdf;
+    --color-mid-tint: #fcecf2;
+    /* ---- Size Palette ---- */
+    --header-height: 50px;
+    --margin: 48px;
+}
+
+html, body {
+    margin: 0;
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+    height: 100%;
+}
+
+html {
+    background-color: var(--color-hi-tone);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: var(--margin);
+    padding-right: var(--margin);
+}
+
+body > * {
+    /* background-color: teal !important; */
+    flex-shrink: 1;
+    margin: calc(var(--margin) / 2);
+}
+
+#header-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: var(--color-mid-tone);
+    font-size:1.75em;
+}
+
+#body-content {
+    /* height: 100%; */
+    flex: 1;
+}
+
+#bottom-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: var(--color-mid-tone);
+    font-size:.7em;
+}
+
+#bottom-bar > * {
+    text-align: center;
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+#bottom-contact {
+    text-align: right;
+}
